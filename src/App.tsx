@@ -1,10 +1,10 @@
-import { Button } from "parakeet-ui";
+import { Box } from "parakeet-ui";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <Button>btn</Button>
+      <Box className="text-white p-6 rounded-lg">Parakeet Box</Box>
     </>
   );
 }

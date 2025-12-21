@@ -8,3 +8,7 @@ body {
     sans-serif;
   line-height: 1.7;
 }
+
+.pk-box {
+  box-sizing: border-box;
+}
