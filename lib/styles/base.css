@@ -1,0 +1,10 @@
+:root {
+  direction: rtl;
+  color-scheme: light dark;
+}
+
+body {
+  font-family: Vazirmatn, system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.7;
+}
