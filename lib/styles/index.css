@@ -1,2 +1,7 @@
+@import "../core/theme/tokens.css";
+@import "../core/theme/colors.css";
+@import "../core/theme/light.css";
+@import "../core/theme/dark.css";
+
 @import "./reset.css";
 @import "./base.css";

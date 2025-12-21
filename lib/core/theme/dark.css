@@ -1,0 +1,16 @@
+[data-theme="dark"] {
+  --pk-gray-50: #111827;
+  --pk-gray-100: #1f2937;
+  --pk-gray-200: #374151;
+  --pk-gray-300: #4b5563;
+  --pk-gray-400: #6b7280;
+  --pk-gray-500: #9ca3af;
+  --pk-gray-600: #d1d5db;
+  --pk-gray-700: #e5e7eb;
+  --pk-gray-800: #f3f4f6;
+  --pk-gray-900: #f9fafb;
+
+  --pk-bg: var(--pk-gray-50);
+  --pk-text: var(--pk-gray-800);
+  --pk-border: var(--pk-gray-200);
+}

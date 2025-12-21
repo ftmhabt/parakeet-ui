@@ -1,0 +1,23 @@
+:root {
+  /* Core Color Input */
+  --pk-hue: 160;
+  --pk-saturation: 84%;
+
+  /* Primary Scale */
+  --pk-primary-50: hsl(var(--pk-hue), var(--pk-saturation), 97%);
+  --pk-primary-100: hsl(var(--pk-hue), var(--pk-saturation), 93%);
+  --pk-primary-200: hsl(var(--pk-hue), var(--pk-saturation), 85%);
+  --pk-primary-300: hsl(var(--pk-hue), var(--pk-saturation), 73%);
+  --pk-primary-400: hsl(var(--pk-hue), var(--pk-saturation), 58%);
+  --pk-primary-500: hsl(var(--pk-hue), var(--pk-saturation), 45%);
+  --pk-primary-600: hsl(var(--pk-hue), var(--pk-saturation), 37%);
+  --pk-primary-700: hsl(var(--pk-hue), var(--pk-saturation), 30%);
+  --pk-primary-800: hsl(var(--pk-hue), var(--pk-saturation), 25%);
+  --pk-primary-900: hsl(var(--pk-hue), var(--pk-saturation), 20%);
+
+  /* Status Colors (static for now)*/
+  --pk-success: #10b981;
+  --pk-warning: #f59e0b;
+  --pk-error: #ef4444;
+  --pk-info: #3b82f6;
+}

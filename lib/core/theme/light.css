@@ -1,0 +1,17 @@
+:root {
+  --pk-gray-50: #f9fafb;
+  --pk-gray-100: #f3f4f6;
+  --pk-gray-200: #e5e7eb;
+  --pk-gray-300: #d1d5db;
+  --pk-gray-400: #9ca3af;
+  --pk-gray-500: #6b7280;
+  --pk-gray-600: #4b5563;
+  --pk-gray-700: #374151;
+  --pk-gray-800: #1f2937;
+  --pk-gray-900: #111827;
+
+  /* semantic aliases */
+  --pk-bg: var(--pk-gray-50);
+  --pk-text: var(--pk-gray-800);
+  --pk-border: var(--pk-gray-200);
+}
