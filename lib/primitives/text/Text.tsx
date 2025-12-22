@@ -1,45 +1,35 @@
-import { TextProps } from "./types";
+import { TextProps } from "parakeet-ui";
+import React from "react";
+import { HtmlTextElement } from "./types";
 
-export const Text: React.FC<TextProps> = ({
+export function Text<T extends HtmlTextElement = "p">({
+  as,
   size = "md",
   weight = "normal",
   color = "secondary",
-  className = "",
-  children,
+  className,
+  style,
   ...props
-}) => {
-  const sizeMap = {
-    sm: "0.75rem",
-    md: "0.875rem",
-    lg: "1rem",
-  };
-
-  const weightMap = {
-    normal: 400,
-    medium: 500,
-    bold: 700,
-  };
-
-  const colorMap = {
-    primary: "var(--pk-primary-500)",
-    secondary: "var(--pk-gray-700)",
-    muted: "var(--pk-gray-500)",
-    success: "var(--pk-success)",
-    error: "var(--pk-error)",
-  };
+}: TextProps<T>) {
+  const Component = (as ?? "p") as React.ElementType;
 
   return (
-    <p
-      style={{
-        fontSize: sizeMap[size],
-        fontWeight: weightMap[weight],
-        color: colorMap[color],
-        direction: "rtl",
-      }}
+    <Component
+      dir="rtl"
       className={className}
+      style={{
+        fontSize:
+          size === "sm" ? "0.75rem" : size === "lg" ? "1rem" : "0.875rem",
+        fontWeight: weight === "bold" ? 700 : weight === "medium" ? 500 : 400,
+        color:
+          color === "primary"
+            ? "var(--pk-primary-500)"
+            : color === "muted"
+            ? "var(--pk-gray-500)"
+            : "var(--pk-gray-700)",
+        ...style,
+      }}
       {...props}
-    >
-      {children}
-    </p>
+    />
   );
-};
+}
