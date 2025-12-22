@@ -1,32 +1,34 @@
-import { TextProps } from "parakeet-ui";
 import React from "react";
-import { HtmlTextElement } from "./types";
+import { TextVariant, textVariants } from "./text.variants";
+
+type HtmlTextElement = keyof HTMLElementTagNameMap;
+
+export type TextProps<T extends HtmlTextElement = "p"> = {
+  as?: T;
+  variant?: TextVariant;
+  className?: string;
+  style?: React.CSSProperties;
+} & React.ComponentPropsWithoutRef<T>;
 
 export function Text<T extends HtmlTextElement = "p">({
   as,
-  size = "md",
-  weight = "normal",
-  color = "secondary",
+  variant = "body",
   className,
   style,
   ...props
 }: TextProps<T>) {
   const Component = (as ?? "p") as React.ElementType;
+  const variantStyle = textVariants[variant];
 
   return (
     <Component
       dir="rtl"
       className={className}
       style={{
-        fontSize:
-          size === "sm" ? "0.75rem" : size === "lg" ? "1rem" : "0.875rem",
-        fontWeight: weight === "bold" ? 700 : weight === "medium" ? 500 : 400,
-        color:
-          color === "primary"
-            ? "var(--pk-primary-500)"
-            : color === "muted"
-            ? "var(--pk-gray-500)"
-            : "var(--pk-gray-700)",
+        fontSize: variantStyle.fontSize,
+        fontWeight: variantStyle.fontWeight,
+        color: variantStyle.color,
+        lineHeight: variantStyle.lineHeight,
         ...style,
       }}
       {...props}
