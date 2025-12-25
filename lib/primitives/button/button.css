@@ -1,0 +1,39 @@
+.pk-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 6px;
+
+  font-family: inherit;
+  line-height: 1;
+  white-space: nowrap;
+
+  transition: background-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.05s ease;
+}
+
+.pk-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.pk-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--pk-primary-300);
+}
+
+/* hover color per variant */
+.pk-button[data-variant="primary"]:hover {
+  background-color: var(--pk-primary-600);
+}
+
+.pk-button[data-variant="secondary"]:hover {
+  background-color: var(--pk-gray-200);
+}
+
+.pk-button[data-variant="ghost"]:hover {
+  background-color: var(--pk-primary-50);
+}
